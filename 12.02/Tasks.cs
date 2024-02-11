@@ -55,7 +55,7 @@ namespace _12._02
 
 			string fileName = "companies.xml";
 
-			if (File.Exists(fileName))
+			if (!File.Exists(fileName))
 			{
 				File.Create(fileName).Close();
 				File.WriteAllText(fileName, XmlText());
